@@ -1,0 +1,35 @@
+footer{
+    background-color: $darkPurp;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-top: 1px solid $orange;
+    .copyright{
+        font-size: clamp(0.75rem,2vw,0.85rem);
+        font-weight: 300;
+    }
+    .colphon{
+        display: flex;
+        justify-content: space-between;
+        .links_wrapper{
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            column-gap: 20px;
+            a{           
+                &:hover{
+                    path{
+                        @include Smooth(0.2s);     
+                        color: $orange !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    footer {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}

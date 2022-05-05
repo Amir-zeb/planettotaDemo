@@ -1,0 +1,58 @@
+.synergy_sec{
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
+    .flex_wrapper{
+        margin-top: 3rem;
+        @include Flex(row,center,stretch,1rem,1rem,wrap);
+    }
+}
+
+.get_in_touch_form{
+    form{
+        .form_hd{
+            color: #333;
+            text-align: center;
+            font-size: clamp(0.95rem,2vw,2rem);
+            margin-bottom: 1.1em;
+            font-weight: 400;
+        }
+        .form_para{
+            display: block;
+            color: #333;
+            text-align: center;
+            font-size: clamp(0.75rem,2vw,0.95rem);
+            margin-top: 0.85em;
+            font-weight: 400;
+        }
+        .para{
+            color: #333;
+            font-size: clamp(0.7rem,2vw,0.8rem);
+            text-align: center;
+            padding-left: 0.75em;
+            padding-right: 0.75em;
+            margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
+        }        
+    }
+}
+
+@media (max-width:994px) {
+    .custom_cardV1 {
+        max-width: 300px;
+    }
+}
+
+@media (max-width:767px) {
+    .custom_cardV1 {
+        max-width: 450px;
+    }
+    .synergy_sec .flex_wrapper {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width:350px) {
+    .synergy_sec .common_btn {
+        padding: 0.6em 2em;
+    }
+}

@@ -1,0 +1,189 @@
+main {
+    background: $bgGradient;
+}
+
+.top_padd {
+    padding-top: 14rem;
+}
+
+.col_hd {
+    font-size: clamp(1.5rem, 2vw, 5rem);
+    margin-bottom: 0.7em;
+    font-weight: 300;
+}
+
+.col_para {
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    margin-bottom: 0.8em;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+form {
+    .input_wrapper {
+        margin-bottom: 0.7rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid rgb(148, 147, 147);
+            padding: 0.75em;
+            font-size: 0.85rem;
+            color: #333;
+        }
+
+        .custom_upload_file {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 0.65em 0.75em;
+            overflow: hidden;
+
+            img {
+                max-width: 25px;
+                cursor: pointer;
+            }
+
+            span {
+                color: #333;
+                font-size: 0.85rem;
+                padding-left: 0.8em;
+            }
+        }
+    }
+
+    .common_btn {
+        margin: 0 auto;
+    }
+
+
+    .custom_checkbox {
+        display: block;
+        position: relative;
+        min-width: 20px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        /* On mouse-over, add a grey background color */
+        &:hover input~.checkmark {
+            background-color: rgb(255, 255, 255);
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            /* When the checkbox is checked, add a blue background */
+            &:checked~.checkmark {
+                background-color: rgb(255, 255, 255);
+            }
+
+            /* Show the checkmark when checked */
+            &:checked~.checkmark:after {
+                display: block;
+            }
+        }
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 19px;
+            width: 19px;
+            background-color: #eee;
+            box-shadow: inset 0 0 0 2px $orange;
+            border-radius: 2px;
+
+            /* Create the checkmark/indicator (hidden when not checked) */
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            /* Style the checkmark/indicator */
+            &:after {
+                left: 7px;
+                top: 4px;
+                width: 5px;
+                height: 10px;
+                border: solid $orange;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.filter {
+    margin-bottom: 2rem;
+
+    form {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 25px;
+
+        label {
+            display: flex;
+            column-gap: 10px;
+
+            img {
+                max-width: 25px;
+            }
+        }
+
+        select {
+            background-color: $orange;
+            border-radius: 25px;
+            padding: 0.5em 4em 0.5em 0.5em;
+            font-size: clamp(0.75rem, 2vw, 1rem);
+            border: 0;
+        }
+    }
+}
+
+
+.common_sec {
+    padding-bottom: 5rem;
+
+    h4 {
+        font-size: clamp(1.1rem, 2vw, 2rem);
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        font-size: clamp(0.85rem, 2vw, 1.1rem);
+        font-weight: 300;
+    }
+
+    a.common_btn {
+        margin: 2em auto 0;
+    }
+
+    .img_wrapper {
+        text-align: center;
+
+        img {
+            max-width: 450px;
+            border-radius: 15px;
+        }
+    }
+}

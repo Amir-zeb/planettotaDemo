@@ -1,0 +1,19 @@
+.planet_tota_mv_page{
+    .planet_tota_mv_sec{
+        padding-top: 3rem;
+    }
+}
+
+@media (max-width:1500px) {
+    .planet_tota_mv_sec .common_btn{
+        padding: 0.6em 2em;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width:1500px) {
+    .planet_tota_mv_sec .common_btn{
+        padding: 0.6em 1.5em;
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,170 @@
+.controls_hidden{
+    .vjs-control-bar{
+        display:none !important;
+    }
+    .floating_sec{
+        z-index: 999;
+        background-color: #2d202fbd;
+        position: absolute;
+        bottom: 5rem;
+        left: 50%;
+        width: 100%;
+        max-width: 800px;
+        padding: 1.5em 2em;
+        transform: translateX(-50%);
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        border-radius: 25px;
+        .coming_soon_mint{
+            h2{
+                color: $orange;
+                font-size: clamp(1.5rem,2vw,2rem);
+                margin-bottom: 0.5em;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: 'OcrA' !important;
+                letter-spacing: 10px;
+            }
+            .timer{
+                ul{
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    li{
+                        p{
+                            text-align: center;
+                            font-size: 5rem;
+                            line-height: normal;
+                            font-family: 'OcrA' !important;
+                            letter-spacing: 10px;
+                            span{
+                                display: block;
+                                font-size: 0.75rem;
+                                font-family: inherit;
+                                letter-spacing: 5px;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .connect_wallet{
+            h3{
+                text-align: center;
+                color: $orange;
+                font-family: 'OcrA';
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                span{
+                    margin-left: 1rem;
+                    color: #fff;
+                    font-family: 'OcrA';
+                }
+                margin-bottom: 0.5em;
+            }
+            p{
+                text-align: center;
+                font-family: 'OcrA';
+                margin-bottom: 1em;
+            }
+            .common_btn{
+                margin: 0 auto;
+                font-family: 'OcrA';
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+    }
+}
+
+
+@media (max-width:1400px) {
+    .controls_hidden .floating_sec .coming_soon_mint h2 {
+        font-size: 1.5rem;
+    }
+    .controls_hidden .floating_sec .coming_soon_mint .timer ul li p {
+        font-size: 3rem;
+    }
+    .controls_hidden .floating_sec {
+        max-width: 600px;
+    }
+    .controls_hidden .floating_sec .connect_wallet h3 {
+        font-size: 1.2rem;
+    }
+    .controls_hidden .floating_sec .connect_wallet p {
+        font-size: 0.75rem;
+    }
+    .controls_hidden .floating_sec .connect_wallet .common_btn {
+        font-size: 0.75rem;
+        padding: 0.55em 2em;
+    }
+}
+
+@media (max-width:1200px) {
+    .controls_hidden .floating_sec {
+        bottom: -6rem;
+        background-color: #2d202f;
+    }
+
+    .controls_hidden .floating_sec .connect_wallet h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:991px) {
+    .controls_hidden .floating_sec .coming_soon_mint h2 {
+        font-size: 1.2rem;
+    }
+    .controls_hidden .floating_sec .coming_soon_mint .timer ul li p {
+        font-size: 2rem;
+    }
+    .controls_hidden .floating_sec {
+        max-width: 450px;
+    }
+}
+
+@media (max-width:575px) {
+    .controls_hidden .floating_sec .coming_soon_mint .timer ul li p {
+        font-size: 1rem;
+    }
+    .controls_hidden .floating_sec .coming_soon_mint .timer ul li p span {
+        font-size: 0.45rem;
+    }
+    .controls_hidden .floating_sec {
+        max-width: 345px;
+        bottom: -3rem;
+    }
+    .controls_hidden .floating_sec .coming_soon_mint h2 {
+        font-size: 0.95rem;
+    }
+    .controls_hidden .floating_sec .connect_wallet h3 {
+        font-size: 0.75rem;
+    }
+    .controls_hidden .floating_sec .connect_wallet p {
+        font-size: 0.75rem;
+        display: none;
+    }
+}
+
+@media (max-width:450px) {
+    .controls_hidden .floating_sec {
+        max-width: 317px;
+        bottom: -8rem;
+    }
+}
+
+@media (max-width:420px) {
+    .controls_hidden .floating_sec .coming_soon_mint .timer ul li p {
+        font-size: 0.85rem;
+    }
+    .controls_hidden .floating_sec{
+        padding: 1.5em 1em;
+        max-width: 280px !important;
+        bottom: -8rem;
+    }
+    .controls_hidden .floating_sec .coming_soon_mint .timer ul li p span {
+        font-size: 0.4rem;
+    }
+}

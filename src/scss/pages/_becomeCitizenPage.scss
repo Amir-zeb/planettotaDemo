@@ -1,0 +1,47 @@
+.become_citizen_page{
+    .intro_sec{
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+    }
+    .become_citizen_sec{
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        .flex_wrapper{
+            @include Flex(row,space-between,center,1rem,2rem,unset);
+            .col_left{
+                width: 30%;
+                .inner_flex{
+                    @include Flex(column,flex-start,flex-start,0.5rem,1rem,unset);
+                }
+            }
+            .col_right{
+                width: 70%;
+
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .become_citizen_page .become_citizen_sec .container{
+        max-width: 100%;
+    }
+}
+
+@media (max-width:450px) {
+    .become_citizen_page .become_citizen_sec .flex_wrapper .col_right .col_hd{
+        font-size: 0.85rem;
+    }
+    .become_citizen_page .become_citizen_sec .flex_wrapper .col_right .col_para{
+        font-size: 0.65rem;
+    }
+    .custom_cardV5 .title {
+        font-size: 0.65rem;
+    }
+    .become_citizen_page .become_citizen_sec .flex_wrapper {
+        gap: 1rem 0.5rem;
+    }
+    .become_citizen_page .intro_sec {
+        padding-bottom: 1rem;
+    }
+}

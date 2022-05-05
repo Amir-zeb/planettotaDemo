@@ -1,0 +1,277 @@
+.nft_page{
+    padding-bottom: 3rem;
+    .intro_sec{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }  
+    .nft_cards_sec{
+        padding-bottom: 3rem;
+        .flex_wrapper{
+            margin-top: 3rem;
+            @include Flex(row,center,stretch,1rem,1.5rem,wrap);
+    
+        }
+    }
+    .nft_new_sec{
+        .col_para{
+            max-width: 100%;
+        }
+        .col_hd{
+            margin-bottom: 0.3rem;
+        }
+        form{
+            margin-top: 0.4rem;
+            label{
+                display: flex;
+                column-gap: 10px;
+                font-weight: 600;
+                font-size: clamp(0.85rem,2vw,1.2rem);
+                margin-bottom: 0.5em;
+                img{
+                    max-width: 15px;
+                }
+            }
+            select{
+                width: 100%;
+                max-width: 300px;
+                background-color: $orange;
+                border-radius: 25px;
+                padding: 0.5em 4em 0.5em 0.5em;
+                font-size: clamp(0.75rem,2vw,1rem);
+                border: 0;
+            }
+            .tags_ul{
+                margin-top: 0.5em;
+                ul{
+                    list-style: none;
+                    li{
+                        display: flex;
+                        column-gap: 15px;
+                        margin-bottom: 0.4em;
+                        align-items: flex-start;
+                        :last-child{
+                            margin-bottom: 0;
+                        }
+                        .tag_cat{
+                            p{
+                                font-size: 0.75rem;
+                            }
+                        }
+                        .tags{
+                            display: flex;
+                            flex-wrap: wrap;
+                            column-gap: 5px;
+                            row-gap: 5px;
+                            span{
+                                font-size: 0.65rem;
+                                &.bg-light{
+                                    color: #333; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.road_map{
+    ul{
+        list-style: none;
+        width: 100%;
+        max-width: 900px;
+        margin: 3rem auto;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 35px;
+            z-index: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background-color: $orange;
+        }
+        li{
+            display: flex;
+            column-gap: 25px;
+            align-items: flex-start;
+            &:not(li:last-child){
+                margin-bottom: 2em;
+            }
+            &:last-child{
+                background-color: #3b2435;
+            }
+            .comp_percent{
+                min-width: 75px;
+                border:3px solid $orange;
+                border-radius: 4px;
+                text-align: center;
+                padding: 0.2em 0.5em;
+                background-color: $darkPurp;
+                // &:before{
+                //     content: '';
+                //     position: absolute;
+                //     bottom: -29px;
+                //     left: 50%;
+                //     transform: translateX(-50%);
+                //     height: 20px;
+                //     width: 3px;
+                //     background-color: $orange;
+                // }
+                span{
+                    font-size: clamp(0.85rem,2.5vw,1.2rem);
+                }
+            }
+        }
+    }
+}
+
+.faq{
+    padding-top: 3rem;
+    .accordion-button::after {
+        content: '\002B';
+        background-image: none !important;
+        background-color: #FFB899;
+        color: $orange;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        width: 27px;
+        height: 27px;
+        font-weight: 500;
+    }
+    .accordion-button:not(.collapsed)::after{
+        content: '	\2212';
+        transform: rotate(0) !important;
+    }
+    .accordion-button:focus {
+        box-shadow: none !important;
+    }    
+    .accordion-item {
+        border-radius: 10px !important;
+        overflow: hidden;
+    }
+    .accordion-item {
+        margin-bottom: 0.5em;
+    }
+    .accordion-button:not(.collapsed){
+        box-shadow: none !important;
+        color: #333;
+        background-color: #fff;
+    }
+    .accordion-header {
+        margin-bottom: 0;
+        border-radius: 10px !important;
+    }
+    .accordion-button{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: clamp(0.85rem,2vw,1rem);
+    }
+    .para{
+        p{
+            color: #585858;
+            font-size: clamp(0.75rem,2vw,0.95rem);
+        }
+    }
+}
+
+.gallery{
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    .flex_cards{
+        padding-top: 4rem;
+        @include Flex(row,center,stretch,1rem,1rem,wrap);
+        .img_wrapper{
+            width: calc(90%/4);
+            &:hover{
+                img{
+                    transform: scale(1.01);
+                }
+            }
+            img{
+                border-radius: 10px;
+                @include Smooth(0.2s);
+            }
+        }
+    }
+}
+
+
+@media (max-width:1200px) {
+    .faq {
+        padding-top: 1rem;
+    }
+    .nft_page .intro_sec.last_child {
+        padding-top: 2rem;
+        padding-bottom: 0;
+    } 
+    .intro_sec.first_child {
+        padding-top: 10rem;
+        padding-bottom: 0;
+    }
+    section.nft_new_sec{
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width:991px) {
+    .nft_page .nft_new_sec form {
+        margin-top: 1.4rem;
+        margin-left: auto;
+        width: fit-content;
+    }
+    .gallery {
+        padding-top: 0;
+        padding-bottom: 3rem;
+    }
+    .gallery .flex_cards {
+        padding-top: 2rem;
+    }
+    .gallery .flex_cards .img_wrapper {
+        width: calc(93%/3);
+    }
+    .nft_page .nft_cards_sec .flex_wrapper .custom_cardV2{
+        max-width: calc(90% / 3);
+    }
+}
+
+@media (max-width:775px) {
+    .road_map ul li:not(li:last-child) {
+        margin-bottom: 1.5em;
+    }
+    .road_map ul li {
+        column-gap: 15px;
+    }
+    .road_map ul li p{
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width:575px) {
+    .gallery .flex_cards .img_wrapper {
+        width: calc(93%/2);
+    }
+}
+
+@media (max-width:575px) {
+    .nft_page .nft_cards_sec .flex_wrapper .custom_cardV2{
+        max-width: calc(94% / 2);
+    }
+    .intro_sec.first_child {
+        padding-top: 6rem;
+    }
+}
+
+@media (max-width:450px) {
+    .intro_sec.first_child {
+        padding-top: 10rem;
+    }
+}
+
+@media (max-width:420px) {
+    .nft_page .nft_cards_sec .flex_wrapper .custom_cardV2{
+        max-width: 250px;
+    }
+}

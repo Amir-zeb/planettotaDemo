@@ -1,0 +1,29 @@
+.about_us_page{
+    .intro_sec{
+        margin-bottom: 6rem;
+        padding-top: 1rem;
+    }
+    .about_sec{
+        padding-bottom: 3rem;
+        .flex_wrapper{
+            margin-top: 3rem;
+            @include Flex(row,center,stretch,1rem,1.5rem,wrap);
+    
+        }
+    }
+}
+
+@media (max-width:1300px) {
+    .about_us_page .intro_sec {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width:767px) {
+    .about_us_page .intro_sec {
+        margin-bottom: 3rem;
+    }
+    .about_us_page .custom_cardV2 {
+        max-width: 190px;
+    }
+}

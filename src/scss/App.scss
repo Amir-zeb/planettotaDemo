@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    color: #fff;
+    font-family: 'Roboto';
+}
+
+:root {
+    --dark-purp: #2D202F;
+    --light-purp: #4B273B;
+    --orange: #FF4F00;
+    --grey: #C6C3C3;
+    --bg-gradient: linear-gradient(56deg, rgba(45, 32, 47, 1) 0%, rgba(75, 39, 59, 1) 99%);
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #FF4F00 #C6C3C3;
+}
+
+$darkPurp:var(--dark-purp);
+$lightPurp:var(--light-purp);
+$orange:var(--orange);
+$grey:var(--grey);
+$bgGradient:var(--bg-gradient);
+
+body {
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $orange;
+    }
+}
+
+.bg_darkpurp {
+    background-color: $darkPurp;
+}
+
+.bg_orange {
+    background-color: $orange;
+}
+
+.bg_grey {
+    background-color: $grey;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        @extend a;
+    }
+}
+
+@import 'mixin',
+'other',
+'btns',
+'cards',
+'modals',
+'./banner',
+'header',
+'footer',
+'./pages/homePage',
+'./pages/expSynergyPage',
+'./pages/totaCreatorsPage',
+'./pages/aboutPage.scss',
+'./pages/piecePTPage',
+'./pages/planetTotaMVPage',
+'./pages/meetFirstsPage',
+'./pages/sepProductionPage',
+'./pages/becomeCitizenPage',
+'./pages/seriesFollowPage',
+'./pages/nftPage';
